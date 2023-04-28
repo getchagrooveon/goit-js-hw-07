@@ -9,20 +9,13 @@ const structure = galleryItems
          <img class="gallery__image" src="${element.preview}" alt="${element.description}" />
       </a>
    </li>`
-  ).join('\r\n');
+  ).join('');
 gallery.innerHTML = structure
 
-console.log(galleryItems);
+console.log(structure);
 
-gallery.addEventListener("click", (event)=>{
-    event.preventDefault()
+
 const lightbox = new SimpleLightbox('.gallery__link', {
-  captions: true, 
-  captionSelector: 'img',
-  captionType: "attr", 
-  captionsData: "alt",
-  captionPosition: 'bottom', 
+  captionsData: "alt", 
   captionDelay: 250,
-  docClose: true,
-})
 })
